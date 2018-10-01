@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="cs-cz">
+
+<head>
+  <!-- InstanceBeginEditable name="meta" -->
+  <meta name="description" content="Nabídka služeb v oblasti statistické analýzy dat - konzultace, jednorázová analýza dat, kontinuální reporting." />
+  <meta name="keywords" content="analýza dat, datová analýza, statistika, reporting, data scraping, analýza, datový soubor, prediktivní model, testování hypotéz, tabulka četností" />
+  <meta name="author" content="Jaroslav Bezděk" />
+  <!-- InstanceEndEditable -->
+
+  <title>Služby | analyze-my-data.com</title>
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+  <meta charset="utf-8" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='apple-touch-icon.png')}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon-16x16.png')}}">
+  <link rel="manifest" href="{{url_for('static', filename='site.webmanifest') }}">
+  <link rel="mask-icon" href="{{url_for('static', filename='safari-pinned-tab.svg') }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <!-- hlavička stránky -->
+  <header class="header_whole_page">
+    <!-- <div id="logo"><h1>analyze<span style="color: white">my</span>data.com</h1></div> -->
+    <!-- <div id="logo"><h1>analyze&minus;my&minus;data.com</h1></div> -->
+    <div id="logo"><h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
+    </div>
+
+
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index', filename='index.html') }}">Domů</a></li>
+        <li class="active"><a href="#">Služby</a></li>
+        <li><a href="{{ url_for('about_me', filename='about_me.html') }}">O mně</a></li>
+        <li><a href="{{ url_for('tools', filename='tools.html') }}">Nástroje</a></li>
+        <li><a href="{{ url_for('contact_form', filename='contact_form.html') }}">Kontakt</a></li>
+        <li class="not_hover"><a href="{{ url_for('services_english', filename='en_services.html') }}">
+          <img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32"/>
+        </a></li>
+      </ul>
+    </nav>
+
+
+  </header>
+  <!-- obsah stránky je vložen do tagu article -->
+  <article>
+    <!-- article je rozdělen na hlavičku (header) a sekci (section) -->
+    <div id="center_my_page">
+      <header>
+        <h1>Služby</h1>
+        <hr align="left" width="90%">
+      </header>
+      <div class="cistic"></div>
+      <section>
+        <div style='float:left;'>
+          <h3>Co nabízím?</h3>
+
+          <p class="content">Nabízím následující služby v oblasti <b>statistické analýzy dat</b>:</p>
+
+          <ol>
+            <li>
+              <h4>Konzultace</h4>
+              <p class="content">
+                Máte anebo budete mít datový soubor, z něhož potřebujete vypočítat
+                agregované hodnoty, vytvořit predikční model, či&nbsp;na jeho základě ověřit hypotézu?
+                Nebo potřebujete data zpracovat jiným způsobem, ale nevíte jak na to?
+                Potom se na&nbsp;mě neváhejte obrátit - rád vám poradím, jaké řešení by pro vás bylo
+                nejvhodnější a pomohu vám jej dosáhnout.
+              </p>
+
+              <p class="content">
+                Konzultaci poskytuji zcela <b>ZDARMA</b>!
+              </p>
+            </li>
+
+            <li>
+              <h4>Analýza dat</h4>
+              <p class="content">
+              </p>
+
+              <p class="content">
+                Postup analýzy dat dělím do následujících pěti kroků:
+              </p>
+
+              <ul>
+                <li class='jobs_list'>jasná specifikace zadání klientem,</li>
+                <li class='jobs_list'>pořízení datového souboru (zaslání klientem, stažení z webu, nebo data scraping),</li>
+                <li class='jobs_list'>průzkumová analýza dat (kontrola dat a jejich příprava k analýze),</li>
+                <li class='jobs_list'>datová analýza (např. testování hypotéz, sestavení modelu, tvorba grafů),</li>
+                <li class='jobs_list'>interpretace výsledků a příprava výstupů (texty, obrázky).</li>
+              </ul>
+
+              <p class="content">Při datové analýze <b>ne</b>jsem omezen:</p>
+
+              <ul>
+                <li class='jobs_list'>druhem dat (vícerozměrná data, časové řady aj.),</li>
+                <li class='jobs_list'>formátem datového souboru (XLSX, CSV, JSON aj.),</li>
+                <li class='jobs_list'>ani vědním oborem, ze kterého data pocházejí.</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4>Reporting</h4>
+              <!--
+            <p class="content">
+              V případě, že disponujete daty, která se v pravidelných časových intervalech
+              aktualizují, ale vy byste rádi viděli aktualizované výsledky analýzy o tato nová data,
+              nabízím možnost kontinuálního reportingu.
+            </p>
+          -->
+              <p class="content">
+                V případě, že potřebujete analýzu pravidelně replikovat na jiných datech, které však mají
+                stále stejnou strukturu, nabízím službu kontinuálního statického reportingu.
+              </p>
+              <p class="content">
+                Způsoby dodávání výsledků analýz v rámci reportingu mohou být různé.
+                Může se jednat o pravidelné zasílání tabulkových výstupů e-mailem, ale stejně tak je možné
+                vytvořit intuitivní webovou aplikaci, která bude přizpůsobena vašim potřebám tak, aby do ní bylo
+                možné data nahrát a na stisk tlačítka zobrazit výsledky. Vše záleží na domluvě.
+              </p>
+            </li>
+          </ol>
+
+
+          <h3>Kolik to bude stát?</h3>
+
+          <p class="content">
+            Každá analýza se liší, protože každý datový soubor i zadání jsou jiné.
+            Moje sazba je však jednotná, a to <b>250 Kč/hodinu</b>.
+          </p>
+
+          <p class="content">
+            Do konečné ceny však nepočítám čas strávený konzultací, kterou poskytuji <b>ZDARMA</b>.
+            Neváhejte se tedy na mě obrátit s&nbsp;jakýmkoliv požadavkem. Rád vám před započetím práce poradím,
+            jaký druh analýzy by byl vhodný, a&nbsp;následně udělám cenový odhad,
+            abyste se mohli rozhodnout, zda o&nbsp;mé řešení máte zájem, či nikoliv.
+          </p>
+        </div>
+        <div class="cistic"></div>
+        <p style="margin-bottom:6cm;">
+        </p>
+
+      </section>
+      <div class="cistic"></div>
+    </div>
+  </article>
+  <!-- paticka stránky -->
+  <footer>
+    Vytvořil &copy; Jaroslav Bezděk, 2018
+  </footer>
+</body>
+
+</html>

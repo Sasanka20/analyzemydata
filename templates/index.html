@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="cs-cz">
+
+<head>
+  <!-- InstanceBeginEditable name="meta" -->
+  <meta name="description" content="Nabídka služeb v oblasti statistické analýzy dat - konzultace, jednorázová analýza dat, kontinuální reporting." />
+  <meta name="keywords" content="analýza dat, datová analýza, statistika, reporting, data scraping, analýza, datový soubor, prediktivní model, testování hypotéz, tabulka četností" />
+  <meta name="author" content="Jaroslav Bezděk" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- InstanceEndEditable -->
+
+  <title>Domů | analyze-my-data.com</title>
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+  <meta charset="utf-8" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='apple-touch-icon.png')}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon-16x16.png')}}">
+  <link rel="manifest" href="{{url_for('static', filename='site.webmanifest') }}">
+  <link rel="mask-icon" href="{{url_for('static', filename='safari-pinned-tab.svg') }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <!-- hlavička stránky -->
+  <header class="header_whole_page">
+    <!-- <div id="logo"><h1>analyze<span style="color: white">my</span>data.com</h1></div> -->
+    <!-- <div id="logo"><h1>analyze&minus;my&minus;data.com</h1></div> -->
+    <div id="logo"><h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
+    </div>
+
+
+    <nav>
+      <ul>
+        <li class="active"><a href="#">Domů</a></li>
+        <li><a href="{{ url_for('services', filename='services.html') }}">Služby</a></li>
+        <li><a href="{{ url_for('about_me', filename='about_me.html') }}">O mně</a></li>
+        <li><a href="{{ url_for('tools', filename='tools.html') }}">Nástroje</a></li>
+        <li><a href="{{ url_for('contact_form', filename='contact_form.html') }}">Kontakt</a></li>
+        <li class="not_hover"><a href="{{ url_for('index_english', filename='en_index.html') }}">
+          <img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32"/>
+        </a></li>
+      </ul>
+    </nav>
+
+
+  </header>
+  <!-- obsah stránky je vložen do tagu article -->
+  <article>
+    <!-- article je rozdělen na hlavičku (header) a sekci (section) -->
+    <div id="center_my_page">
+      <header>
+        <!--
+        <h1>analyze-my-data.com</h1>
+        <hr align="left" width="90%">
+      -->
+      </header>
+      <section>
+        <div style='float:left;'>
+          <p class="content">
+            </br>
+            <h3>Potřebujete analyzovat svá data, ale sami nevíte, jak na to?</h3>
+            <h3>Potom jste na správném místě!</h3>
+            </br>
+          </p>
+        </div>
+        <div class="cistic"></div>
+        <p style="margin-bottom:5cm;">
+        </p>
+
+      </section>
+      <div class="cistic"></div>
+    </div>
+  </article>
+  <!-- paticka stránky -->
+  <footer>
+    Vytvořil &copy; Jaroslav Bezděk, 2018
+  </footer>
+</body>
+
+</html>
