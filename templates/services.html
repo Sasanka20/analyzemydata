@@ -2,10 +2,25 @@
 <html lang="cs-cz">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127186980-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127186980-1');
+  </script>
+
   <!-- InstanceBeginEditable name="meta" -->
   <meta name="description" content="Nabídka služeb v oblasti statistické analýzy dat - konzultace, jednorázová analýza dat, kontinuální reporting." />
   <meta name="keywords" content="analýza dat, datová analýza, statistika, reporting, data scraping, analýza, datový soubor, prediktivní model, testování hypotéz, tabulka četností" />
   <meta name="author" content="Jaroslav Bezděk" />
+  <!-- InstanceEndEditable -->
+
+  <!-- Část kódu, která napomáhá k responzivitě webu -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- InstanceEndEditable -->
 
   <title>Služby | analyze-my-data.com</title>
@@ -26,23 +41,25 @@
   <header class="header_whole_page">
     <!-- <div id="logo"><h1>analyze<span style="color: white">my</span>data.com</h1></div> -->
     <!-- <div id="logo"><h1>analyze&minus;my&minus;data.com</h1></div> -->
-    <div id="logo"><h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
+    <div id="logo">
+      <a href="{{ url_for('index', filename='index.html') }}">
+        <h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
+      </a>
     </div>
 
-
-    <nav>
-      <ul>
-        <li><a href="{{ url_for('index', filename='index.html') }}">Domů</a></li>
-        <li class="active"><a href="#">Služby</a></li>
-        <li><a href="{{ url_for('about_me', filename='about_me.html') }}">O mně</a></li>
-        <li><a href="{{ url_for('tools', filename='tools.html') }}">Nástroje</a></li>
-        <li><a href="{{ url_for('contact_form', filename='contact_form.html') }}">Kontakt</a></li>
-        <li class="not_hover"><a href="{{ url_for('services_english', filename='en_services.html') }}">
-          <img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32"/>
-        </a></li>
-      </ul>
-    </nav>
-
+    <div class="topnav" id="myTopnav">
+      <nav>
+        <ul>
+          <a href="{{ url_for('index', filename='index.html') }}">Domů</a>
+          <a href="#" class="active">Služby</a>
+          <a href="{{ url_for('about_me', filename='about_me.html') }}">O mně</a>
+          <a href="{{ url_for('tools', filename='tools.html') }}">Nástroje</a>
+          <a href="{{ url_for('contact_form', filename='contact_form.html') }}">Kontakt</a>
+          <a href="{{ url_for('services_english', filename='en_services.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32"/></a>
+          <a href="javascript:void(0);" class="icon not_hover" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        </ul>
+      </nav>
+    </div>
 
   </header>
   <!-- obsah stránky je vložen do tagu article -->
@@ -129,7 +146,7 @@
 
           <p class="content">
             Každá analýza se liší, protože každý datový soubor i zadání jsou jiné.
-            Moje sazba je však jednotná, a to <b>250 Kč/hodinu</b>.
+            Moje sazba je však jednotná, a to <b>300 Kč/hodinu</b>.
           </p>
 
           <p class="content">
@@ -151,6 +168,16 @@
   <footer>
     Vytvořil &copy; Jaroslav Bezděk, 2018
   </footer>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 </body>
 
 </html>

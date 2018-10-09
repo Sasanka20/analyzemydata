@@ -1,11 +1,26 @@
 <!doctype html>
-<html lang="cs-cz">
+<html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127186980-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127186980-1');
+  </script>
+
   <!-- InstanceBeginEditable name="meta" -->
   <meta name="description" content="Data analysis services - consultation, data analysis, reporting." />
   <meta name="keywords" content="data analysis, statistics, reporting, data scraping, analysis, dataset, prediction model, hypothesis testing, pivot table, value counts" />
   <meta name="author" content="Jaroslav Bezděk" />
+  <!-- InstanceEndEditable -->
+
+  <!-- Část kódu, která napomáhá k responzivitě webu -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- InstanceEndEditable -->
 
   <title>Home | analyze-my-data.com</title>
@@ -30,18 +45,20 @@
     <div id="logo"><h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
     </div>
 
-    <nav>
-      <ul>
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="{{ url_for('services_english', filename='en_services.html') }}">Services</a></li>
-        <li><a href="{{ url_for('about_me_english', filename='en_about_me.html') }}">About me</a></li>
-        <li><a href="{{ url_for('tools_english', filename='en_tools.html') }}">Tools</a></li>
-        <li><a href="{{ url_for('contact_form_english', filename='en_contact_form.html') }}">Contact</a></li>
-        <li class="not_hover"><a href="{{ url_for('index', filename='index.html') }}">
-          <img src="{{ url_for('static', filename='Flag_CZ.png') }}" alt="Flag_CZ" width="32" height="32"/>
-        </a></li>
-      </ul>
-    </nav>
+    <div class="topnav" id="myTopnav">
+      <nav>
+        <ul>
+          <a href="#" class="active">Home</a></li>
+          <a href="{{ url_for('services_english', filename='en_services.html') }}">Services</a>
+          <a href="{{ url_for('about_me_english', filename='en_about_me.html') }}">About me</a>
+          <a href="{{ url_for('tools_english', filename='en_tools.html') }}">Tools</a>
+          <a href="{{ url_for('contact_form_english', filename='en_contact_form.html') }}">Contact</a>
+          <a href="{{ url_for('index', filename='index.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_CZ.png') }}" alt="Flag_CZ" width="32" height="32"/></a>
+          <a href="javascript:void(0);" class="icon not_hover" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        </ul>
+      </nav>
+    </div>
+
   </header>
   <!-- obsah stránky je vložen do tagu article -->
   <article>
@@ -75,6 +92,16 @@
   <footer>
     Made by &copy; Jaroslav Bezděk, 2018
   </footer>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 </body>
 
 </html>
