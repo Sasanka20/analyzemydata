@@ -19,7 +19,7 @@
   <!-- InstanceEndEditable -->
 
   <!-- Část kódu, která napomáhá k responzivitě webu -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- InstanceEndEditable -->
 
@@ -43,7 +43,9 @@
     <!-- <div id="logo"><h1>analyze&minus;my&minus;data.com</h1></div> -->
     <div id="logo">
       <a href="{{ url_for('index', filename='index.html') }}">
-        <h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
+        <div class="hide_on_mobiles">
+          <h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
+        </div>
       </a>
     </div>
 

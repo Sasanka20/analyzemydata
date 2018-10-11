@@ -235,6 +235,10 @@ li>p {
   display: none;
 }
 
+@-ms-viewport {
+  width: device-width;
+}
+
 @media screen and (max-width: 1170px) {
   .topnav a:not(.icon) {
     display: none;
@@ -278,12 +282,29 @@ li>p {
 
   .topnav.responsive nav ul {
     float: none;
-    margin: 73px 0px;
+    margin-top: 73px;
+    margin-right: 0px;
+    margin-left: 25%;
   }
 }
 
 @media screen and (min-width: 1600px) {
   nav ul {
     margin: 0px 15%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hide_on_mobiles {
+    display: none;
+  }
+
+  #logo {
+    width: 25%;
+  }
+
+  .topnav.responsive nav ul {
+    float: none;
+    margin-left 0px;
   }
 }
