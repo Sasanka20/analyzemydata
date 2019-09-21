@@ -56,7 +56,7 @@
           <a href="#" class="active">O mně</a>
           <a href="{{ url_for('tools', filename='tools.html') }}">Nástroje</a>
           <a href="{{ url_for('contact_form', filename='contact_form.html') }}">Kontakt</a>
-          <a href="{{ url_for('about_me_english', filename='en_about_me.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32"/></a>
+          <a href="{{ url_for('about_me_english', filename='en_about_me.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32" /></a>
           <a href="javascript:void(0);" class="icon not_hover" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </ul>
       </nav>
@@ -88,8 +88,11 @@
 
           <h3>Pracovní zkušenosti</h3>
           <ul>
+            <li class='jobs_list'>Datový analytik/vědec<br />
+              <i>OSVČ (10/2018 - současnost)</i></li>
+
             <li class='jobs_list'>Junior Data Scientist<br />
-              <i>Gauss Algorithmic (07/2018 - současnost)</i></li>
+              <i>Gauss Algorithmic (07/2018 - 09/2019)</i></li>
 
             <li class='jobs_list'>Datový analytik<br />
               <i>Jumpshot (11/2017 - 06/2018)</i></li>
@@ -111,17 +114,17 @@
           </ul>
           <br>
         </div>
-          <div class="cistic"></div>
+        <div class="cistic"></div>
 
-          <p style="margin-bottom:5cm;">
-          </p>
+        <p style="margin-bottom:5cm;">
+        </p>
 
       </section>
     </div>
   </article>
   <!-- paticka stránky -->
   <footer>
-    Vytvořil &copy; Jaroslav Bezděk, {{ year }}
+    &copy; 2018 - {{ year }} Jaroslav Bezděk
   </footer>
   <script>
     function myFunction() {

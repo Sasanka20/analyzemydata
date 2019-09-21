@@ -54,7 +54,7 @@
           <a href="{{ url_for('about_me', filename='about_me.html') }}">O mně</a>
           <a href="{{ url_for('tools', filename='tools.html') }}">Nástroje</a>
           <a href="{{ url_for('contact_form', filename='contact_form.html') }}">Kontakt</a>
-          <a href="{{ url_for('index_english', filename='en_index.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32"/></a>
+          <a href="{{ url_for('index_english', filename='en_index.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32" /></a>
           <a href="javascript:void(0);" class="icon not_hover" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </ul>
       </nav>
@@ -97,7 +97,7 @@
   </article>
   <!-- paticka stránky -->
   <footer>
-    Vytvořil &copy; Jaroslav Bezděk, {{ year }}
+    &copy; 2018 - {{ year }} Jaroslav Bezděk
   </footer>
   <script>
     function myFunction() {

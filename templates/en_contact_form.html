@@ -23,6 +23,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- InstanceEndEditable -->
 
+  <!-- Ikony pro kontaktní formulář -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
   <title>Contact | analyze-my-data.com</title>
   <link href="{{ url_for('static', filename='style_v1.css') }}" rel="stylesheet" type="text/css">
   <meta charset="utf-8" />
@@ -56,7 +59,7 @@
           <a href="{{ url_for('about_me_english', filename='en_about_me.html') }}">About me</a>
           <a href="{{ url_for('tools_english', filename='en_tools.html') }}">Tools</a>
           <a href="#" class="active">Contact</a>
-          <a href="{{ url_for('contact_form', filename='contact_form.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_CZ.png') }}" alt="Flag_CZ" width="32" height="32"/></a>
+          <a href="{{ url_for('contact_form', filename='contact_form.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_CZ.png') }}" alt="Flag_CZ" width="32" height="32" /></a>
           <a href="javascript:void(0);" class="icon not_hover" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </ul>
       </nav>
@@ -77,20 +80,22 @@
         <div style='float:left;'>
           <table id="whoami">
             <tr>
-              <td class='first_column' style="vertical-align: middle;" title="Send me an email">
-                <img src="{{ url_for('static', filename='icon_mail2.png') }}" alt="mail_icon" width="32" height="32"/>
+              <td class='first_column' style="vertical-align: middle;" title="E-mail">
+                <i class="far fa-envelope fa-icon"></i>
               </td>
               <td class='second_column' style="vertical-align: middle;">bezdekjarda@seznam.cz</td>
             </tr>
             <tr>
               <td class='first_column' style="vertical-align: middle;" title="Telephone number">
-                <img src="{{ url_for('static', filename='icon_phone.png') }}" alt="phone_icon" width="32" height="32"/>
+                <i class="fas fa-phone fa-icon"></i>
               </td>
               <td class='second_column' style="vertical-align: middle;">+420 604 724 559</td>
             </tr>
             <tr>
-              <td class='first_column' style="vertical-align: middle;" title="IČO">
-                <img src="{{ url_for('static', filename='icon_person3.png') }}" alt="person_icon" width="32" height="32"/>
+              <td class='first_column' style="vertical-align: middle;" title="Employer identification number">
+                <a href="{{ url_for('static', filename='vypis_zr_bezdek.pdf')}}">
+                  <i class="fas fa-user-tie fa-icon"></i>
+                </a>
               </td>
               <td class='second_column' style="vertical-align: middle;">
                 <a href="{{ url_for('static', filename='vypis_zr_bezdek.pdf')}}">07506287</a>
@@ -98,15 +103,18 @@
             </tr>
             <tr>
               <td class='first_column' style="vertical-align: middle;" title="Residence">
-                <img src="{{ url_for('static', filename='icon_home4.png') }}" alt="home_icon" width="32" height="32"/>
+                <i class="fas fa-chair fa-icon"></i>
               </td>
               <td class='second_column' style="vertical-align: middle;">
-                Brno, Czech Republic
+                Brno, Czechia
               </td>
             </tr>
+
             <tr>
               <td class='first_column' style="vertical-align: middle;" title="LinkedIn profile">
-                <img src="{{ url_for('static', filename='icon_linkedin.png') }}" alt="linkedin_icon" width="32" height="32"/>
+                <a href="https://cz.linkedin.com/in/jaroslav-bezděk-66b813124">
+                  <i class="fab fa-linkedin fa-icon"></i>
+                </a>
               </td>
               <td class='second_column' style="vertical-align: middle;">
                 <a href="https://cz.linkedin.com/in/jaroslav-bezděk-66b813124">
@@ -114,12 +122,40 @@
                 </a>
               </td>
             </tr>
+
+            <tr>
+              <td class='first_column' style="vertical-align: middle;" title="GitHub profile">
+                <a href="https://github.com/Sasanka20">
+                  <i class="fab fa-github-square fa-icon"></i>
+                </a>
+              </td>
+              <td class='second_column' style="vertical-align: middle;">
+                <a href="https://github.com/Sasanka20">
+                  Jaroslav Bezděk
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class='first_column' style="vertical-align: middle;" title="StackOverflow profile">
+                <a href="https://stackoverflow.com/users/7122272/jaroslav-bezd%c4%9bk">
+                  <i class="fab fa-stack-overflow fa-icon"></i>
+                </a>
+              </td>
+              <td class='second_column' style="vertical-align: middle;">
+                <a href="https://stackoverflow.com/users/7122272/jaroslav-bezd%c4%9bk">
+                  Jaroslav Bezděk
+                </a>
+              </td>
+            </tr>
           </table>
           <br>
         </div>
-          <div class="cistic"></div>
-          <p style="margin-bottom:5cm;">
-          </p>
+
+        <div class="cistic"></div>
+
+        <p style="margin-bottom:5cm;">
+        </p>
 
       </section>
       <div class="cistic"></div>
@@ -127,7 +163,7 @@
   </article>
   <!-- paticka stránky -->
   <footer>
-    Made by &copy; Jaroslav Bezděk, {{ year }}
+    &copy; 2018 - {{ year }} Jaroslav Bezděk
   </footer>
   <script>
     function myFunction() {
