@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="cs-cz">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127186980-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127186980-1');
+  </script>
+
+  <!-- InstanceBeginEditable name="meta" -->
+  <meta name="description" content="Nabídka služeb v oblasti statistické analýzy dat - analýza dat, modelování dat, data mining, strojové učení, statistické zpracování dotazníkových dat, testování statistických hypotéz, reporting, konzultace." />
+  <meta name="keywords" content="analýza dat, datová analýza, statistické zpracování dat, modelování dat, data mining, strojové učení, testování hypotéz, reporting, tabulka četností, dizertační práce, diplomová práce, bakalářská práce, dotazníková data, vizualizace dat, Brno" />
+  <meta name="author" content="Jaroslav Bezděk" />
+
+  <!-- Část kódu, která napomáhá k responzivitě webu -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- InstanceEndEditable -->
+
+  <title>Domů | analyze-my-data.com</title>
+  <link href="{{ url_for('static', filename='style_v1.css') }}" rel="stylesheet" type="text/css">
+  <meta charset="utf-8" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='apple-touch-icon.png')}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon-16x16.png')}}">
+  <link rel="manifest" href="{{url_for('static', filename='site.webmanifest') }}">
+  <link rel="mask-icon" href="{{url_for('static', filename='safari-pinned-tab.svg') }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+  <!-- hlavička stránky -->
+  <header class="header_whole_page">
+    <!-- <div id="logo"><h1>analyze<span style="color: white">my</span>data.com</h1></div> -->
+    <!-- <div id="logo"><h1>analyze&minus;my&minus;data.com</h1></div> -->
+    <div id="logo">
+      <div class="hide_on_mobiles">
+        <h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
+      </div>
+    </div>
+    <div class="topnav" id="myTopnav">
+      <nav>
+        <ul>
+          <a href="#" class="active">Domů</a>
+          <a href="{{ url_for('services', filename='services.html') }}">Služby</a>
+          <a href="{{ url_for('about_me', filename='about_me.html') }}">O mně</a>
+          <a href="{{ url_for('tools', filename='tools.html') }}">Nástroje</a>
+          <a href="{{ url_for('contact_form', filename='contact_form.html') }}">Kontakt</a>
+          <a href="{{ url_for('index_english', filename='en_index.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32" /></a>
+          <a href="javascript:void(0);" class="icon not_hover" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <!-- obsah stránky je vložen do tagu article -->
+  <article>
+    <!-- article je rozdělen na hlavičku (header) a sekci (section) -->
+    <div id="center_my_page">
+      <header>
+      </header>
+      <section>
+        <div style='float:left;'>
+          <p class="content">
+            </br>
+            <h3>Potřebujete analyzovat svá data, ale sami nevíte, jak na to?</h3>
+            <h3>Potom jste na správném místě!</h3>
+            </br>
+          </p>
+          <p class="content">
+            Jmenuji se Jaroslav Bezděk a rád vám se statistickou analýzou vašich dat pomohu. Pro jednotlivce i firmy nabízím služby v&nbsp;rámci následujících oblastí statistiky:
+            <ul>
+              <li class='jobs_list'>statistická analýza (velkých) dat,</li>
+              <li class='jobs_list'>modelování dat a data mining (regresní analýza, shluková analýza, klasifikační modely aj.),</li>
+              <li class='jobs_list'>vizualizace dat,</li>
+              <li class='jobs_list'>statistické zpracování dat z dotazníku,</li>
+              <li class='jobs_list'>testování statistických hypotéz,</li>
+              <li class='jobs_list'>reporting.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="cistic"></div>
+        <p style="margin-bottom:5cm;">
+        </p>
+
+      </section>
+      <div class="cistic"></div>
+    </div>
+  </article>
+  <!-- paticka stránky -->
+  <footer>
+    &copy; 2018 - {{ year }} Jaroslav Bezděk
+  </footer>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</body>
+
+</html>
