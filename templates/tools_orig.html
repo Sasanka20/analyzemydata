@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="cs-cz">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127186980-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-127186980-1');
+  </script>
+
+  <!-- InstanceBeginEditable name="meta" -->
+  <meta name="description" content="Nabídka služeb v oblasti statistické analýzy dat - analýza dat, modelování dat, data mining, strojové učení, statistické zpracování dotazníkových dat, testování statistických hypotéz, reporting, konzultace." />
+  <meta name="keywords" content="analýza dat, datová analýza, statistické zpracování dat, modelování dat, data mining, strojové učení, testování hypotéz, reporting, tabulka četností, dizertační práce, diplomová práce, bakalářská práce, dotazníková data, vizualizace dat, Brno" />
+  <meta name="author" content="Jaroslav Bezděk" />
+  <!-- InstanceEndEditable -->
+
+  <!-- Část kódu, která napomáhá k responzivitě webu -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- InstanceEndEditable -->
+
+  <title>Nástroje | analyze-my-data.com</title>
+  <link href="{{ url_for('static', filename='style_v1.css') }}" rel="stylesheet" type="text/css">
+  <meta charset="utf-8" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='apple-touch-icon.png')}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon-16x16.png')}}">
+  <link rel="manifest" href="{{url_for('static', filename='site.webmanifest') }}">
+  <link rel="mask-icon" href="{{url_for('static', filename='safari-pinned-tab.svg') }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+  <!-- hlavička stránky -->
+  <header class="header_whole_page">
+    <div id="logo">
+      <a href="{{ url_for('index', filename='index.html') }}">
+        <div class="hide_on_mobiles">
+          <h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
+        </div>
+      </a>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+      <nav>
+        <ul>
+          <a href="{{ url_for('index', filename='index.html') }}">Domů</a>
+          <a href="{{ url_for('services', filename='services.html') }}">Služby</a>
+          <a href="{{ url_for('about_me', filename='about_me.html') }}">O mně</a>
+          <a href="#" class="active">Nástroje</a>
+          <a href="{{ url_for('contact_form', filename='contact_form.html') }}">Kontakt</a>
+          <a href="{{ url_for('tools_english', filename='en_tools.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32" /></a>
+          <a href="javascript:void(0);" class="icon not_hover" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <!-- obsah stránky je vložen do tagu article -->
+  <article>
+    <!-- article je rozdělen na hlavičku (header) a sekci (section) -->
+    <div id="center_my_page">
+      <header>
+        <h1>Nástroje</h1>
+        <hr align="left" width="90%">
+      </header>
+      <div class="cistic"></div>
+      <section>
+        <div style='float:left;'>
+          <p class="content">
+            Níže uvádím nástroje, které k práci nejčastěji používám.
+          </p>
+
+          <h3>Programovací jazyky</h3>
+
+          <table id="nastroje">
+            <tr>
+              <td align="center"> <img src="{{ url_for('static', filename='R.png') }}" alt="R" width="100" height="100" /> </td>
+              <td align="center"> <img src="{{ url_for('static', filename='Python.png') }}" alt="Python" width="100" height="100" /> </td>
+              <td align="center"> <img src="{{ url_for('static', filename='SQL.png') }}" alt="SQL" width="100" height="100" /> </td>
+            </tr>
+            <tr>
+              <td>
+                <h4>R</h4>
+                <p>R je jazyk navržený pro sta- tistickou analýzu dat a
+                  datové modelování. Kromě analýz lze v&nbsp;R vytvořit
+                  i jednoduché webové prezentace a programy.
+                  <p />
+              </td>
+              <td>
+                <h4>Python</h4>
+                <p>Jedná se o velice flexibilní pro- gramovací jazyk. Kromě datové analýzy jej
+                  používám i na tvorbu webových stránek, jako je třeba tato.
+                  <p />
+              </td>
+              <td>
+                <h4>SQL</h4>
+                <p>SQL je standardizovaný dota- zovací jazyk, který se používá pro
+                  práci s daty uloženými v&nbsp;relačních databázích.
+                  <p />
+              </td>
+            </tr>
+          </table>
+
+          <h3>Prezentace výsledků</h3>
+
+          <table id="nastroje2">
+            <tr>
+              <td align="center"> <img src="{{ url_for('static', filename='latex.png') }}" alt="latex" width="120" height="50" /> </td>
+              <td align="center"> <img src="{{ url_for('static', filename='jupyter.png') }}" alt="jupyter_notebook" width="100" height="100" /> </td>
+              <td align="center"> <img src="{{ url_for('static', filename='shiny.png') }}" alt="shiny_app" width="90" height="104" /> </td>
+            </tr>
+            <tr>
+              <td>
+                <h4>LaTeX</h4>
+                <p>LaTeX je skriptovací jazyk slou- žící pro sazbu textu. Dokument je vygenerovaný ve formátu PDF.
+                  Obsahuje pouze výsledky analýz (výpočty, tabulky, obrázky) a tex- tový komentář.
+                  <p />
+                  <p><a href="{{ url_for('static', filename='Bezděk_ukol_03.pdf')}}">Příklad</a> (školní projekt)</p>
+              </td>
+              <td>
+                <h4>Jupyter Notebook</h4>
+                <p>Jupyter Notebook nabízí doku- ment, který spojuje kód, jeho výs- tupy i&nbsp;lidsky čitelné textové popi- sy analýz.
+                  Dokument lze expor- tovat do formátů HTML a&nbsp;PDF. Výstup lze snadno reprodukovat.
+                  <p />
+                  <p><a href="{{ url_for('static', filename='jupyter_example_CZ.html')}}">Příklad</a> (školní projekt)</p>
+              </td>
+              <td>
+                <h4>Shiny App</h4>
+                <p>Shiny App je veřejně přístupná webová aplikace a představuje vhodné řešení pro zákazníky, kteří chtějí pravidelně
+                  aktuali- zovat výstupy analýz o&nbsp;nová data (např. při reportingu).
+                  <p />
+                  <p><a href="https://jbezdek.shinyapps.io/TVS_semestralni_prace/">Příklad</a> (školní projekt)</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="cistic"></div>
+        <p style="margin-bottom:5cm;">
+        </p>
+
+      </section>
+      <div class="cistic"></div>
+    </div>
+  </article>
+  <!-- paticka stránky -->
+  <footer>
+    &copy; 2018 - {{ year }} Jaroslav Bezděk
+  </footer>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</body>
+
+</html>

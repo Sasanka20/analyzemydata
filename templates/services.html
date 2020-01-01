@@ -2,31 +2,49 @@
 <html lang="cs-cz">
 
 <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Služby | analyze-my-data.com</title>
+
+  <!-- Boostrap and CSS style sheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link href="{{ url_for('static', filename='style_v1.css') }}" rel="stylesheet" type="text/css"> -->
+  <link href="{{ url_for('static', filename='style_bootstrap.css') }}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127186980-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-127186980-1');
   </script>
 
+  <!-- reference Moment.js library -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    function getCurrentYear() {
+      var NowMoment = moment();
+      year = NowMoment.format("YYYY")
+      document.getElementById("currentYear").innerHTML = year;
+    }
+  </script>
+
+  <!-- Footer icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
   <!-- InstanceBeginEditable name="meta" -->
   <meta name="description" content="Nabídka služeb v oblasti statistické analýzy dat - analýza dat, modelování dat, data mining, strojové učení, statistické zpracování dotazníkových dat, testování statistických hypotéz, reporting, konzultace." />
   <meta name="keywords" content="analýza dat, datová analýza, statistické zpracování dat, modelování dat, data mining, strojové učení, testování hypotéz, reporting, tabulka četností, dizertační práce, diplomová práce, bakalářská práce, dotazníková data, vizualizace dat, Brno" />
   <meta name="author" content="Jaroslav Bezděk" />
-  <!-- InstanceEndEditable -->
 
-  <!-- Část kódu, která napomáhá k responzivitě webu -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- InstanceEndEditable -->
-
-  <title>Služby | analyze-my-data.com</title>
-  <link href="{{ url_for('static', filename='style_v1.css') }}" rel="stylesheet" type="text/css">
-  <meta charset="utf-8" />
-
+  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='apple-touch-icon.png')}}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon-32x32.png')}}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon-16x16.png')}}">
@@ -34,145 +52,193 @@
   <link rel="mask-icon" href="{{url_for('static', filename='safari-pinned-tab.svg') }}" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+
 </head>
 
-<body>
-  <!-- hlavička stránky -->
-  <header class="header_whole_page">
-    <div id="logo">
-      <a href="{{ url_for('index', filename='index.html') }}">
-        <div class="hide_on_mobiles">
-          <h1>analyze&minus;<span style="color: white">my</span>&minus;data.com</h1>
+<body onload="getCurrentYear()">
+  <header>
+    <nav class="navbar navbar-custom py-3">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('index', filename='index.html') }}">
+          <img src="../static/logo4.png" width="50" height="50" class="d-inline-block align-top logo" alt="">
+          <span class="d-none d-sm-block">
+            <span style="color: black">analyze&minus;</span><span style="color: white">my</span><span style="color: black">&minus;data.com</span>
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Služby</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('about_me', filename='about_me.html') }}">O mně</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('tools', filename='tools.html') }}">Nástroje</a>
+            </li>
+            <li class="nav-item active">
+              <a href="{{ url_for('services_english', filename='en_services.html') }}"><img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32" /></a>
+            </li>
+          </ul>
         </div>
-      </a>
-    </div>
-
-    <div class="topnav" id="myTopnav">
-      <nav>
-        <ul>
-          <a href="{{ url_for('index', filename='index.html') }}">Domů</a>
-          <a href="#" class="active">Služby</a>
-          <a href="{{ url_for('about_me', filename='about_me.html') }}">O mně</a>
-          <a href="{{ url_for('tools', filename='tools.html') }}">Nástroje</a>
-          <a href="{{ url_for('contact_form', filename='contact_form.html') }}">Kontakt</a>
-          <a href="{{ url_for('services_english', filename='en_services.html') }}" class="not_hover"><img src="{{ url_for('static', filename='Flag_UK.png') }}" alt="Flag_UK" width="32" height="32"/></a>
-          <a href="javascript:void(0);" class="icon not_hover" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-        </ul>
-      </nav>
-    </div>
-
+      </div>
+    </nav>
   </header>
-  <!-- obsah stránky je vložen do tagu article -->
+
   <article>
-    <!-- article je rozdělen na hlavičku (header) a sekci (section) -->
-    <div id="center_my_page">
-      <header>
-        <h1>Služby</h1>
-        <hr align="left" width="90%">
-      </header>
-      <div class="cistic"></div>
-      <section>
-        <div style='float:left;'>
-          <h3>Co nabízím?</h3>
+    <div class="container" id="container-article">
 
-          <p class="content">Nabízím následující služby v oblasti <b>statistické analýzy dat</b>:</p>
+      <div class="jumbotron" id="jumbotron-article">
+        <!-- <div class="container bg-light text-dark"> -->
+        <h1 class="display-4">Služby</h1>
+        <div id="content_space"></div>
 
-          <ol>
-            <li>
-              <h4>Konzultace</h4>
-              <p class="content">
-                Máte anebo budete mít datový soubor, z něhož potřebujete vypočítat
-                agregované hodnoty, vytvořit predikční model, či&nbsp;na jeho základě ověřit hypotézu?
-                Nebo potřebujete data zpracovat jiným způsobem, ale nevíte jak na to?
-                Potom se na&nbsp;mě neváhejte obrátit - rád vám poradím, jaké řešení by pro vás bylo
-                nejvhodnější a pomohu vám jej dosáhnout.
-              </p>
+        <p>Nabízím následující služby v oblasti <b>statistické analýzy dat</b>:</p>
 
-              <p class="content">
-                Konzultaci poskytuji zcela <b>ZDARMA</b>!
-              </p>
-            </li>
+        <ol>
+          <li>
+            <b>Konzultace</b>
+            <p>
+              Máte anebo budete mít datový soubor, z něhož potřebujete vypočítat
+              agregované hodnoty, vytvořit predikční model, či&nbsp;na jeho základě ověřit hypotézu?
+              Nebo potřebujete data zpracovat jiným způsobem, ale nevíte jak na to?
+              Potom se na&nbsp;mě neváhejte obrátit - rád vám poradím, jaké řešení by pro vás bylo
+              nejvhodnější a pomohu vám jej dosáhnout.
+            </p>
 
-            <li>
-              <h4>Analýza dat</h4>
-              <p class="content">
-              </p>
+            <p>
+              Konzultaci poskytuji zcela <b>ZDARMA</b>!
+            </p>
+          </li>
 
-              <p class="content">
-                Postup analýzy dat dělím do následujících pěti kroků:
-              </p>
+          <li>
+            <b>Analýza dat</b>
+            <p></p>
 
-              <ul>
-                <li class='jobs_list'>jasná specifikace zadání klientem,</li>
-                <li class='jobs_list'>pořízení datového souboru (zaslání klientem, stažení z webu, nebo data scraping),</li>
-                <li class='jobs_list'>průzkumová analýza dat (kontrola dat a jejich příprava k analýze),</li>
-                <li class='jobs_list'>datová analýza (např. testování hypotéz, sestavení modelu, tvorba grafů),</li>
-                <li class='jobs_list'>interpretace výsledků a příprava výstupů (texty, obrázky).</li>
-              </ul>
+            <p>
+              Postup analýzy dat dělím do následujících pěti kroků:
+            </p>
 
-              <p class="content">Při datové analýze <b>ne</b>jsem omezen:</p>
+            <ul>
+              <li class='jobs_list'>jasná specifikace zadání klientem,</li>
+              <li class='jobs_list'>pořízení datového souboru (zaslání klientem, stažení z webu, nebo data scraping),</li>
+              <li class='jobs_list'>průzkumová analýza dat (kontrola dat a jejich příprava k analýze),</li>
+              <li class='jobs_list'>datová analýza (např. testování hypotéz, sestavení modelu, tvorba grafů),</li>
+              <li class='jobs_list'>interpretace výsledků a příprava výstupů (texty, obrázky).</li>
+            </ul>
+            <p></p>
 
-              <ul>
-                <li class='jobs_list'>druhem dat (vícerozměrná data, časové řady aj.),</li>
-                <li class='jobs_list'>formátem datového souboru (XLSX, CSV, JSON aj.),</li>
-                <li class='jobs_list'>ani vědním oborem, ze kterého data pocházejí.</li>
-              </ul>
-            </li>
+            <p>Při datové analýze <b>ne</b>jsem omezen:</p>
 
-            <li>
-              <h4>Reporting</h4>
-              <p class="content">
-                V případě, že potřebujete analýzu pravidelně replikovat na jiných datech, které však mají
-                stále stejnou strukturu, nabízím službu kontinuálního statického reportingu.
-              </p>
-              <p class="content">
-                Způsoby dodávání výsledků analýz v rámci reportingu mohou být různé.
-                Může se jednat o pravidelné zasílání tabulkových výstupů e-mailem, ale stejně tak je možné
-                vytvořit intuitivní webovou aplikaci, která bude přizpůsobena vašim potřebám tak, aby do ní bylo
-                možné data nahrát a na stisk tlačítka zobrazit výsledky. Vše záleží na domluvě.
-              </p>
-            </li>
-          </ol>
+            <ul>
+              <li class='jobs_list'>druhem dat (vícerozměrná data, časové řady aj.),</li>
+              <li class='jobs_list'>formátem datového souboru (XLSX, CSV, JSON aj.),</li>
+              <li class='jobs_list'>ani vědním oborem, ze kterého data pocházejí.</li>
+            </ul>
+          </li>
+          <p></p>
 
+          <li>
+            <b>Reporting</b>
+            <p></p>
+            <p>
+              V případě, že potřebujete analýzu pravidelně replikovat na jiných datech, které však mají
+              stále stejnou strukturu, nabízím službu kontinuálního statického reportingu.
+            </p>
+            <p>
+              Způsoby dodávání výsledků analýz v rámci reportingu mohou být různé.
+              Může se jednat o pravidelné zasílání tabulkových výstupů e-mailem, ale stejně tak je možné
+              vytvořit intuitivní webovou aplikaci, která bude přizpůsobena vašim potřebám tak, aby do ní bylo
+              možné data nahrát a na stisk tlačítka zobrazit výsledky. Vše záleží na domluvě.
+            </p>
+          </li>
+        </ol>
 
-          <h3>Kolik to bude stát?</h3>
-          <!--
-          <p class="content">
-            Každá analýza se liší, protože každý datový soubor i zadání jsou jiné.
-            Moje sazba je však jednotná, a to <b>400 Kč/hodinu</b>.
-          </p>
-          -->
-          <p class="content">
-            Cenu není možné bez znalosti dat a zadání přesně odhadnout. Rád bych vás proto
-            požádal o zaslání vašeho požadavku na některý z mých <a href="{{ url_for('contact_form', filename='contact_form.html') }}">kontaktů</a>.
-            Do konečné ceny nikdy nepočítám čas strávený konzultací, kterou poskytuji <b>ZDARMA</b>.
-            Neváhejte se tedy na mě obrátit s&nbsp;jakýmkoliv požadavkem. Rád vám před započetím práce poradím,
-            jaký druh analýzy by byl vhodný, a&nbsp;následně udělám cenový odhad,
-            abyste se mohli rozhodnout, zda o&nbsp;mé řešení máte zájem, či nikoliv.
-          </p>
-        </div>
-        <div class="cistic"></div>
-        <p style="margin-bottom:6cm;">
+        <div id="content_space"></div>
+
+        <h4 class="card-h4">Kolik to bude stát?</h4>
+
+        <p>
+          Cenu není možné bez znalosti dat a zadání přesně odhadnout. Rád bych vás proto
+          požádal o zaslání vašeho požadavku na některý z mých kontaktů.
+          Do konečné ceny nikdy nepočítám čas strávený konzultací, kterou poskytuji <b>ZDARMA</b>.
+          Neváhejte se tedy na mě obrátit s&nbsp;jakýmkoliv požadavkem. Rád vám před započetím práce poradím,
+          jaký druh analýzy by byl vhodný, a&nbsp;následně udělám cenový odhad,
+          abyste se mohli rozhodnout, zda o&nbsp;mé řešení máte zájem, či nikoliv.
         </p>
 
-      </section>
-      <div class="cistic"></div>
+
+
+      </div>
+
+      <!-- <p style="margin-bottom:5cm;"></p> -->
     </div>
   </article>
-  <!-- paticka stránky -->
-  <footer>
-    &copy; 2018 - {{ year }} Jaroslav Bezděk
+
+  <!--
+  <footer class="page-footer font-small">
+    <div class="footer-copyright text-center py-3">&copy; 2018 - {{ year }} Jaroslav Bezděk</div>
   </footer>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-  </script>
+  -->
+
+  <!--
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-auto py-3">
+          <div class="mb-3 flex-center">
+            <a href="mailto:bezdekjarda@seznam.cz?subject=Email from analyze-my-data.com webpage" class="fb-ic social">
+              <i class="far fa-envelope-open fa-lg mr-md-5 mr-3"></i>
+            </a>
+            <a href="https://cz.linkedin.com/in/jaroslav-bezděk-66b813124" class="li-ic social">
+              <i class="fab fa-linkedin-in fa-lg mr-md-5 mr-3"></i>
+            </a>
+            <a href="https://stackoverflow.com/users/7122272/jaroslav-bezd%c4%9bk" class="li-ic social">
+              <i class="fab fa-stack-overflow fa-lg mr-md-5 mr-3"></i>
+            </a>
+            <a href="https://github.com/Sasanka20" class="li-ic social">
+              <i class="fab fa-github fa-lg mr-md-5 mr-3"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center">&copy; 2018 - {{ year }} Jaroslav Bezděk</div>
+  </footer>
+  -->
+
+  <footer class="page-footer">
+    <div class="container">
+
+      <div class="row justify-content-between">
+        <div class="col-4 align-self-center">
+          <div class="footer-copyright text-center">&copy; 2018 - <span id="currentYear"></span> Jaroslav Bezděk</div>
+        </div>
+        <div class="col-4 align-self-center">
+          <a href="mailto:bezdekjarda@seznam.cz?subject=Email from analyze-my-data.com webpage" class="fb-ic social">
+            <i class="far fa-envelope-open fa-lg mr-md-5 mr-3"></i>
+          </a>
+          <a href="https://cz.linkedin.com/in/jaroslav-bezděk-66b813124" class="li-ic social">
+            <i class="fab fa-linkedin-in fa-lg mr-md-5 mr-3"></i>
+          </a>
+          <a href="https://stackoverflow.com/users/7122272/jaroslav-bezd%c4%9bk" class="li-ic social">
+            <i class="fab fa-stack-overflow fa-lg mr-md-5 mr-3"></i>
+          </a>
+          <a href="https://github.com/Sasanka20" class="li-ic social">
+            <i class="fab fa-github fa-lg mr-md-5 mr-3"></i>
+          </a>
+        </div>
+      </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </div>
+
 </body>
 
 </html>
