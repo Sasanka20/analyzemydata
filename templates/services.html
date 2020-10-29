@@ -9,7 +9,6 @@
 
   <!-- Boostrap and CSS style sheets -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- <link href="{{ url_for('static', filename='style_v1.css') }}" rel="stylesheet" type="text/css"> -->
   <link href="{{ url_for('static', filename='style_bootstrap.css') }}" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -96,145 +95,82 @@
         <h1 class="display-4">Služby</h1>
         <div id="content_space"></div>
 
-        <p>Nabízím následující služby v oblasti <b>statistické analýzy dat</b>:</p>
-
-        <ol>
-          <li>
-            <b>Konzultace</b>
-            <p>
-              Máte nebo budete mít datový soubor, z něhož potřebujete vypočítat
-              agregované hodnoty nebo vytvořit predikční model?
-              Potřebujete na základě datového souboru ověřit hypotézu?
-              Potřebujete data zpracovat, ale nevíte jak na to?
-              Potom se na&nbsp;mě neváhejte obrátit – rád vám poradím, jaké řešení by pro vás bylo
-              nejvhodnější, a navrhnu další postup.
-              <!--
-              Máte anebo budete mít datový soubor, z něhož potřebujete vypočítat
-              agregované hodnoty, vytvořit predikční model, či&nbsp;na jeho základě ověřit hypotézu?
-              Nebo potřebujete data zpracovat jiným způsobem, ale nevíte jak na to?
-              Potom se na&nbsp;mě neváhejte obrátit – rád vám poradím, jaké řešení by pro vás bylo
-              nejvhodnější a pomohu vám jej dosáhnout.
-            -->
-            </p>
-
-            <p>
-              Úvodní konzultaci poskytuji zcela <b>zdarma</b>!
-            </p>
-          </li>
-
-          <li>
-            <b>Analýza dat</b>
-            <p></p>
-
-            <p>
-              <!--Postup analýzy dat dělím do následujících pěti kroků:-->
-              Analýza dat probíhá v následujících pěti krocích:
-            </p>
-
-            <ul>
-              <li class='jobs_list'>jasná specifikace zadání klientem,</li>
-              <li class='jobs_list'>pořízení datového souboru (zaslání klientem, stažení z webu, nebo data scraping),</li>
-              <li class='jobs_list'>průzkumová analýza dat (kontrola dat a jejich příprava k analýze),</li>
-              <li class='jobs_list'>datová analýza (např. testování hypotéz, sestavení modelu, tvorba grafů),</li>
-              <li class='jobs_list'>interpretace výsledků a příprava výstupů (texty, obrázky).</li>
-            </ul>
-            <p></p>
-
-            <p>Při datové analýze <b>ne</b>jsem omezen:</p>
-
-            <ul>
-              <li class='jobs_list'>druhem dat (vícerozměrná data, časové řady aj.),</li>
-              <li class='jobs_list'>formátem datového souboru (XLSX, CSV, JSON aj.),</li>
-              <li class='jobs_list'>ani vědním oborem, ze kterého data pocházejí.</li>
-            </ul>
-          </li>
-          <p></p>
-
-          <li>
-            <b>Reporting</b>
-            <p></p>
-            <p>
-              <!--
-              V případě, že potřebujete analýzu pravidelně replikovat na jiných datech, které však mají
-              stále stejnou strukturu, nabízím službu kontinuálního statického reportingu.
-            -->
-              Pro případ, že potřebujete analýzu pravidelně replikovat na odlišných datech,
-              které však mají stejnou strukturu, nabízím kontinuální statický reporting.
-              Forma dodávání výsledků analýz v rámci reportingu může být různá:
-              <ul>
-                <li class='jobs_list'>pravidelné zasílání tabulkových výstupů emailem,</li>
-                <li class='jobs_list'>intuitivní webová aplikace uzpůsobená vašim potřebám s možností data nahrát a stiskem tlačítka zobrazit výsledky.</li>
-              </ul>
-            </p>
-            <p>
-              <!--
-              Způsoby dodávání výsledků analýz v rámci reportingu mohou být různé.
-              Může se jednat o pravidelné zasílání tabulkových výstupů e-mailem, ale stejně tak je možné
-              vytvořit intuitivní webovou aplikaci, která bude přizpůsobena vašim potřebám tak, aby do ní bylo
-              možné data nahrát a na stisk tlačítka zobrazit výsledky. Vše záleží na domluvě.
-            -->
-            </p>
-          </li>
-        </ol>
+        <h4><i class="far fa-comment-alt"></i>&nbsp;&nbsp;&nbsp;Konzultace</h4>
 
         <div id="content_space"></div>
 
-        <h4 class="card-h4">Kolik to bude stát?</h4>
+        <p>
+          Máte nebo budete mít datový soubor, z něhož potřebujete vypočítat
+          agregované hodnoty nebo vytvořit predikční model?
+          Potřebujete na základě datového souboru ověřit hypotézu?
+          Potřebujete data zpracovat, ale nevíte jak na to?
+          Potom se na&nbsp;mě neváhejte obrátit – rád vám poradím, jaké řešení by pro vás bylo
+          nejvhodnější, a navrhnu další postup.
+        </p>
 
         <p>
-          <!--
-          Cenu není možné bez znalosti dat a zadání přesně odhadnout. Rád bych vás proto
-          požádal o zaslání vašeho požadavku na email <b>bezdekjarda@seznam.cz</b>.
-          Do konečné ceny nikdy nepočítám čas strávený konzultací, kterou poskytuji <b>zdarma</b>.
-          Neváhejte se tedy na mě obrátit s&nbsp;jakýmkoliv požadavkem. Rád vám před započetím práce poradím,
-          jaký druh analýzy by byl vhodný, a&nbsp;následně udělám cenový odhad,
-          abyste se mohli rozhodnout, zda o&nbsp;mé řešení máte zájem, či nikoliv.
-        -->
+          Úvodní konzultaci poskytuji zcela <b>zdarma</b>!
+        </p>
+
+        <div id="content_space"></div>
+
+        <h4><i class="fas fa-chart-pie"></i>&nbsp;&nbsp;&nbsp;Analýza dat</h4>
+
+        <div id="content_space"></div>
+
+        <p>
+          Analýza dat probíhá v následujících pěti krocích:
+        </p>
+
+        <ul>
+          <li class='jobs_list'>jasná specifikace zadání klientem,</li>
+          <li class='jobs_list'>pořízení datového souboru (zaslání klientem, stažení z webu, nebo data scraping),</li>
+          <li class='jobs_list'>průzkumová analýza dat (kontrola dat a jejich příprava k analýze),</li>
+          <li class='jobs_list'>datová analýza (např. testování hypotéz, sestavení modelu, tvorba grafů),</li>
+          <li class='jobs_list'>interpretace výsledků a příprava výstupů (texty, obrázky).</li>
+        </ul>
+        <p></p>
+
+        <p>Při datové analýze <b>ne</b>jsem omezen:</p>
+
+        <ul>
+          <li class='jobs_list'>druhem dat (vícerozměrná data, časové řady aj.),</li>
+          <li class='jobs_list'>formátem datového souboru (XLSX, CSV, JSON aj.),</li>
+          <li class='jobs_list'>ani vědním oborem, ze kterého data pocházejí.</li>
+        </ul>
+
+        <div id="content_space"></div>
+
+        <h4><i class="fas fa-chart-area"></i>&nbsp;&nbsp;&nbsp;Reporting</h4>
+
+        <div id="content_space"></div>
+
+        <p>
+          Pro případ, že potřebujete analýzu pravidelně replikovat na odlišných datech,
+          které však mají stejnou strukturu, nabízím kontinuální statický reporting.
+          Forma dodávání výsledků analýz v rámci reportingu může být různá:
+          <ul>
+            <li class='jobs_list'>pravidelné zasílání tabulkových výstupů emailem,</li>
+            <li class='jobs_list'>intuitivní webová aplikace uzpůsobená vašim potřebám s možností data nahrát a stiskem tlačítka zobrazit výsledky.</li>
+          </ul>
+        </p>
+
+        <div id="content_space"></div>
+
+        <h4><i class="fas fa-dollar-sign"></i></i>&nbsp;&nbsp;&nbsp;Cena</h4>
+
+        <div id="content_space"></div>
+
+        <p>
           Pro odhad ceny je nutná znalost dat a zadání. Váš požadavek proto neváhejte
           zaslat na moji emailovou adresu <b>bezdekjarda@seznam.cz</b>.
           Na základě zaslaných informací vám rád navrhnu vhodný druh analýzy
           a poskytnu cenový odhad. Úvodní konzultaci poskytuji <b>zdarma</b>!
-
         </p>
 
-
-
       </div>
-
-      <!-- <p style="margin-bottom:5cm;"></p> -->
     </div>
   </article>
-
-  <!--
-  <footer class="page-footer font-small">
-    <div class="footer-copyright text-center py-3">&copy; 2018 - {{ year }} Jaroslav Bezděk</div>
-  </footer>
-  -->
-
-  <!--
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-auto py-3">
-          <div class="mb-3 flex-center">
-            <a href="mailto:bezdekjarda@seznam.cz?subject=Email from analyze-my-data.com webpage" class="fb-ic social">
-              <i class="far fa-envelope-open fa-lg mr-md-5 mr-3"></i>
-            </a>
-            <a href="https://cz.linkedin.com/in/jaroslav-bezděk-66b813124" class="li-ic social">
-              <i class="fab fa-linkedin-in fa-lg mr-md-5 mr-3"></i>
-            </a>
-            <a href="https://stackoverflow.com/users/7122272/jaroslav-bezd%c4%9bk" class="li-ic social">
-              <i class="fab fa-stack-overflow fa-lg mr-md-5 mr-3"></i>
-            </a>
-            <a href="https://github.com/Sasanka20" class="li-ic social">
-              <i class="fab fa-github fa-lg mr-md-5 mr-3"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright text-center">&copy; 2018 - {{ year }} Jaroslav Bezděk</div>
-  </footer>
-  -->
 
   <footer class="page-footer">
     <div class="container">
@@ -247,7 +183,7 @@
           <a href="mailto:bezdekjarda@seznam.cz?subject=Email from analyze-my-data.com webpage" class="fb-ic social">
             <i class="far fa-envelope-open fa-lg mr-md-5 mr-3"></i>
           </a>
-          <a href="https://cz.linkedin.com/in/jaroslav-bezděk-66b813124" class="li-ic social">
+          <a href="https://www.linkedin.com/in/jaroslav-bezděk-66b813124/" class="li-ic social">
             <i class="fab fa-linkedin-in fa-lg mr-md-5 mr-3"></i>
           </a>
           <a href="https://stackoverflow.com/users/7122272/jaroslav-bezd%c4%9bk" class="li-ic social">
